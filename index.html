@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="inp1" class="container cv-form">
+        <h1 class="text-center my-2">Resume Genetor</h1>
+        <p class="text-center">By Sarwar</p>
+        <div class="row">
+            <div class="col-md-6">
+
+                <h3>Persnal Information</h3>
+                <div class="form-group ">
+                    <label for="fname">First name:</label>
+                    <input type="text" id="fname" class="form-control" name="fname"
+                        placeholder="Enter your Name"><br><br>
+                </div>
+
+                <div class="form-group col ">
+                    <label for="desiFeild">Designation:</label>
+                    <input type="text" id="desiFeild" class="form-control" name="lname"
+                        placeholder="Enter Your Designation"><br><br>
+
+                </div>
+
+                <div class="form-group col  ">
+                    <label for="">Adress:</label>
+                    <textarea type="text" id="Adress" class="form-control" name="lname" placeholder="Enter Here">
+                        </textarea>
+                </div>
+
+                <div class="form-group mt-3">
+                    <label for="">Select Your Picture</label>
+                    <input id="image-f" class="form-control" type="file">
+                </div>
+
+                <div class="form-group col mt-2 ">
+                    <label for="desiFeild">Phone Number:</label>
+                    <input type="text" id="phone" class="form-control" name="lname"
+                        placeholder="Enter Here"><br><br>
+
+                </div>
+
+                <div class="form-group col ">
+                    <label for="desiFeild">Your Email:</label>
+                    <input type="text" id="email" class="form-control" name="lname" placeholder="Enter Here"><br><br>
+
+                </div>
+
+                <div class="form-group col " id="chillang">
+                    <label for="desiFeild">Your Language:</label>
+                    <input type="text" id="no" class="form-control language mt-2" name="lname"
+                        placeholder="Enter Here">
+                </div>
+
+                <div class="container ">
+                    <button id="lang" onclick="changLang()" class="btn btn-outline-primary mt-3 ">Add More</button>
+                </div>
+
+            </div>
+            <div class="col-md-6 ">
+                <h3>Professional Information</h3>
+                <div class="form-group ">
+                    <label for="">Object:</label>
+                    <textarea type="text" id="object" class="form-control obj" name="lname" placeholder="Enter Here">
+                    </textarea>
+                </div>
+
+                <div class="form-group " id="adqui">
+                    <label for="">Qualification:</label>
+                    <textarea type="text"  class="form-control obj quc" name="lname" placeholder="Enter Here">
+                        </textarea>
+                </div>
+                <div class="container " id="qualification">
+                    <button onclick="adqu()" class="btn btn-outline-primary mt-3 ">Add More</button>
+                </div>
+
+
+                <div class="form-group " id="chil">
+                    <label for="">Work Experience:</label>
+                    <textarea type="text" class="form-control obj wex" name="lname" placeholder="Enter Here">
+                        </textarea>
+                </div>
+                <div class="container " id="work">
+                    <button onclick="addwe()" class="btn btn-outline-primary mt-3 ">Add More</button>
+                </div>
+
+
+
+
+            </div>
+            <button onclick="generateCV()" class="btn btn-primary mt-3 " id="generate">Generate CV</button>
+        </div>
+
+        <!-- <div class="page">
+        <h1>Your Name and Designation</h1>
+        <label for="fname">First name:</label>
+        <input type="text" id="fname" name="fname"><br><br>
+        <label for="lname">Designation:</label>
+        <input type="text" id="desi" name="lname"><br><br>
+        <hr>
+        <h1>Your Object</h1>
+        <label for="fname">object:</label><br>
+        <input type="textarea" id="obj" name="fname" placeholder="Object"><br><br>
+        <hr>
+        <h1 class="edu">Enter Your Education</h1>
+        <label for="cars">Education Level:</label>
+
+        <select id="level">
+            <option value="audi">Select</option>
+            <option value="volvo">metric</option>
+            <option value="saab">intermediate</option>
+            <option value="opel">Graduation</option>
+        </select> <br> <br>
+        <label for="lname">School / University:</label>
+        <input type="text" id="sch" name="lname"><br><br>
+        <hr>
+        <h1 class="ex">Enter Your Experience </h1>
+        <label for="fname">Designation:</label>
+        <input type="text" id="exd" name="fname"><br><br>
+        <label for="lname">Area:</label>
+        <input type="text" id="area" name="lname"><br><br>
+        <hr>
+
+        <h1 class="lang">Enter Your Language</h1>
+        <label for="fname">Language 1:</label>
+        <input type="text" id="lan1" name="fname"><br><br>
+        <label for="lname">Language 2:</label>
+        <input type="text" id="lan2" name="lname"><br><br>
+        <button>Submit Now</button>
+    </div> -->
+
+    </div>
+
+    <div id="nord" class="container cv-template cv-t">
+
+        <div class="row">
+            <!-- first coln -->
+            <div class="col-md-4 text-center py-5 back">
+
+                <img  id="imgtt" class="imag img-fluid"
+                    src="https://static.vecteezy.com/system/resources/previews/024/983/914/non_2x/simple-user-default-icon-free-png.png"
+                    alt="" srcset="">
+
+                <div class="container">
+                    <h3 id="name">Sarwar Ali</h3>
+                    <h5 id="designa">Graphics Designer</h5>
+                    <p id="contact">03173024105</p>
+                    <p id="em">sarwaralii785@gmail.com</p>
+                    <p id="ad">shaik fareed chok thatta </p>
+                    <hr>
+
+                    <div class="con">
+                        <h3>language</h3>
+                        <ul id="one">
+                            <li>English</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- second coln -->
+            <div class="col-md-8">
+                <h2 class="text-center" style="font-weight: 900;" id="nam">Sarwar Ali</h3>
+                    <p class="text-center" id="d">Graphics Designer</p>
+                    <HR>
+                    </HR>
+                    <div class="card mt-4">
+                        <div class="card-header text-center back">
+                            <h3>Object</h3>
+                        </div>
+                    </div>
+
+                    <div class="card-body">
+                        <p id="objt">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi laborum hic accusantium
+                            repellendus? Rem pariatur eligendi nesciunt quod. Fugit voluptates et maiores odio ullam at
+                            reiciendis consectetur odit, nam quis voluptatem? Quos libero laudantium, fuga eveniet
+                            nesciunt molestiae iure atque ab reprehenderit tempora repudiandae animi illo omnis
+                            accusantium delectus perspiciatis!</p>
+
+
+                    </div>
+                    <HR>
+                    </HR>
+                    <div class="card mt-4">
+                        <div class="card-header text-center back">
+                            <h3>Qualification</h3>
+                        </div>
+                    </div>
+
+                    <div class="card-body">
+            <ul id="quali">
+                <li id="q1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident?</li>
+                <li id="q2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident?</li>
+                <li id="q3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident?</li>
+            </ul>
+
+                    </div>
+                    <HR>
+                    </HR>
+                    <div class="card mt-4">
+                        <div class="card-header text-center back">
+                            <h3>Work Experience</h3>
+                        </div>
+                    </div>
+
+                    <div class="card-body">
+                        <ul id="wee">
+                            <li id="ex1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum, quia!</li>
+                            <li id="ex2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum, quia!</li>
+                            <li id="ex3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum, quia!</li>
+                        </ul>
+
+                    </div>
+                </div>
+                
+            </div>
+            
+        </div>
+        <!-- <div class="container cen ">
+            <button onclick="cvPrint()" id="print"  class="btn btn-primary mt-3 las ">Print CV</button>
+
+    </div> -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <script src="js.js">
+
+    </script>
+</body>
+
+</html>
